@@ -1,0 +1,20 @@
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: navy;
+    margin-left: 20px;
+}
+
+.boxshadow {
+    position: relative;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    padding: 10px;
+    background: ghostwhite;
+}
+
+.shadow {
+    color: black;
+    text-shadow: 2px 2px 4px #000000;
+}

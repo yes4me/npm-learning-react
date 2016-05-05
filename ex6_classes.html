@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <title>Hello React!</title>
+    <script src="lib/react.js"></script>
+    <script src="lib/react-dom.js"></script>
+    <script src="lib/browser.min.js"></script>
+</head>
+<body>
+<div id="example"></div>
+<script type="text/babel">
+    class CommentBox extends React.Component {
+        render() {
+            return(
+                <div className="boxshadow">
+                    <h1>Fake tweets</h1>
+                    <Comment author="Thomas Nguyen" body="Wanna eat?" />
+                    <Comment author="Guinea Pig" body="zzz... zzz..." />
+                </div>
+            );
+        }
+    }
+
+    class Comment extends React.Component {
+        render() {
+            return(
+                React.createElement('div', null,
+                    React.createElement('p', { className: 'shadow' }, 'Author: '+ this.props.author),
+                    React.createElement('p', null, this.props.body)
+                )
+            );
+        }
+    }
+
+    let target = document.getElementById('example');
+    ReactDOM.render(
+        <CommentBox />,
+        target
+    );
+</script>
+</body>
+</html>
