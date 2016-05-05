@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="lib/react.js"></script>
+    <script src="lib/react-dom.js"></script>
+    <script src="lib/browser.min.js"></script>
+</head>
+<body>
+<div id="example"></div>
+<script type="text/babel">
+    class StoryBox extends React.Component {
+        render() {
+            // Both ways are valid. 1st way is Javascript, 2nd way = JSX
+            // return( <h1>Example with class</h1> );
+            return( React.createElement('h1', null,'Example with class') );
+        }
+    }
+
+    let target = document.getElementById('example');
+    ReactDOM.render(
+        <StoryBox />,
+        target
+    );
+</script>
+</body>
+</html>

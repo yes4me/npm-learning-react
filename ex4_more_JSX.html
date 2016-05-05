@@ -10,15 +10,22 @@
 <body>
 <div id="example"></div>
 <script type="text/babel">
-    class RobotBox extends React.Component {
+    class StoryBox extends React.Component {
         render() {
-            return <h1>Example2!</h1>;
+            const now = new Date();
+
+            return(
+                React.createElement('div', null,
+                    React.createElement('h1', null, 'Time: '),
+                    React.createElement('p', null, 'Time: '+ now)
+                )
+            );
         }
     }
 
     let target = document.getElementById('example');
     ReactDOM.render(
-        <RobotBox />,
+        <StoryBox />,
         target
     );
 </script>

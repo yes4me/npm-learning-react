@@ -10,9 +10,21 @@
 <body>
 <div id="example"></div>
 <script type="text/babel">
+    class StoryBox extends React.Component {
+        render() {
+            // More JSX
+            return(
+                React.createElement('div', null,
+                    React.createElement('h1', null, 'Example3'),
+                    React.createElement('p', null, 'text')
+                )
+            );
+        }
+    }
+
     let target = document.getElementById('example');
     ReactDOM.render(
-        <h1>Example1!</h1>,
+        <StoryBox />,
         target
     );
 </script>
