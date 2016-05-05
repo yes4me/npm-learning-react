@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="lib/react.js"></script>
+    <script src="lib/react-dom.js"></script>
+    <script src="lib/browser.min.js"></script>
+</head>
+<body>
+<div id="example"></div>
+<script type="text/babel">
+    class RobotBox extends React.Component {
+        render() {
+            return <h1>Example2!</h1>;
+        }
+    }
+
+    let target = document.getElementById('example');
+    ReactDOM.render(
+        <RobotBox />,
+        target
+    );
+</script>
+</body>
+</html>
